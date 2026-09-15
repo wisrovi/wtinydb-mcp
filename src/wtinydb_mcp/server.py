@@ -151,11 +151,21 @@ def get_wtinydb_architect_blueprints() -> str:
         "regex_matches = db.find(Q('title').matches('title', r'^Intro'))\n"
     )
 
+    nested_code = (
+        "from wtinydb import WTinyDB, Q\n\n"
+        "db = WTinyDB(Company, db_path='companies.json')\n"
+        "# N-Level Dotted Path Querying\n"
+        "results = db.find(Q('department.manager.contact.address.city').eq('San Francisco'))\n"
+        "# N-Level Deep Field Updating\n"
+        "db.update(target_company, {'department.budget': 7500000.00})\n"
+    )
+
     return (
         "WTINYDB EXPERT BLUEPRINTS (COMPLETE REFERENCE)\n\n"
         "=== 1. MODEL & CRUD ===\n" + crud_code + "\n"
         "=== 2. ASYNC OPERATIONS ===\n" + async_code + "\n"
-        "=== 3. FLUENT QUERY BUILDER ===\n" + query_code
+        "=== 3. FLUENT QUERY BUILDER ===\n" + query_code + "\n"
+        "=== 4. N-LEVEL NESTED JSON CRUD ===\n" + nested_code
     )
 
 
