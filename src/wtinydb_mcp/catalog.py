@@ -39,6 +39,14 @@ class PatternsCatalog:
             "description": "Mixins for automatic created_at, updated_at timestamps and logical deletion.",
             "origin": "wisrovi SUITE",
         },
+        {
+            "id": "n-level-nested-crud",
+            "name": "N-Level Nested JSON CRUD",
+            "feature": "Nested Documents & Path Querying",
+            "module": "wtinydb.core.database",
+            "description": "Single-responsibility modular CRUD for N-level deep nested JSON objects with dotted path matching.",
+            "origin": "wisrovi SUITE",
+        },
     ]
 
     def search(self, query: str) -> List[Dict[str, str]]:
