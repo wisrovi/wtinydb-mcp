@@ -1,0 +1,1 @@
+"""wtinydb-mcp test suite."""
