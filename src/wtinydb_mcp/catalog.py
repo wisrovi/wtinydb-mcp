@@ -47,6 +47,14 @@ class PatternsCatalog:
             "description": "Single-responsibility modular CRUD for N-level deep nested JSON objects with dotted path matching.",
             "origin": "wisrovi SUITE",
         },
+        {
+            "id": "forensic-ghost-audit",
+            "name": "Enterprise Forensic Audit Log",
+            "feature": "Audit & Security",
+            "module": "wtinydb.models",
+            "description": "ForensicModel and WTinyDB(forensic=True) for automatic ghost table audit logging (_forensic_audit_log).",
+            "origin": "wisrovi SUITE",
+        },
     ]
 
     def search(self, query: str) -> List[Dict[str, str]]:
